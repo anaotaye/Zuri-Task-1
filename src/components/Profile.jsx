@@ -1,14 +1,20 @@
+import "./profile.css";
 import profileImg from "../assets/profile__img.svg";
 import slackIcon from "../assets/slack.svg";
 import githubIcon from "../assets/Icon.svg";
 import zuriIcon from "../assets/Zuri.Internship_Logo.svg";
 import ingressiveIcon from "../assets/I4G.svg";
+import shareIcon from "../assets/Icon2.png"
 
 const Profile = () => {
   return (
     <div>
       <img src={profileImg} id="profile_img" alt="profile" />
-      <h1>Annette Black</h1>
+      <h1 id="profile_name">Annette Black</h1>
+
+      <div className="share_icon">
+        <img src={shareIcon} alt="Share" />
+      </div>
 
       <div className="links">
         <a
@@ -19,7 +25,7 @@ const Profile = () => {
         >
           Twitter Link
         </a>
-        <br />
+        
 
         <a
           href="https://training.zuri.team/"
@@ -30,7 +36,7 @@ const Profile = () => {
         >
           Zuri Team
         </a>
-        <br />
+        
 
         <a
           href="http://books.zuri.team/"
@@ -40,7 +46,7 @@ const Profile = () => {
         >
           Zuri Books
         </a>
-        <br />
+        
 
         <a
           href="https://books.zuri.team/python-for-beginners?ref_id=anastasiaotaye"
@@ -51,7 +57,7 @@ const Profile = () => {
         >
           Python Books
         </a>
-        <br />
+        
 
         <a
           href="https://background.zuri.team/"
@@ -62,7 +68,7 @@ const Profile = () => {
         >
           Background Check for Coders
         </a>
-        <br />
+        
 
         <a
           href="https://books.zuri.team/design-rules"
@@ -77,12 +83,16 @@ const Profile = () => {
 
       <div className="socials">
         <a href="https://twitter.com/anaotaye" id="twitter">
-          <img src={slackIcon} alt="slack link" />
+          <img src={slackIcon} alt="slack link" target="_blank"
+          rel="noreferrer"/>
         </a>
         <a href="https://twitter.com/anaotaye" id="slack">
-          <img src={githubIcon} alt="github link" />
+          <img src={githubIcon} alt="github link" target="_blank"
+          rel="noreferrer"/>
         </a>
       </div>
+
+      <hr className="line" />
 
       <div className="footer">
         <img src={zuriIcon} alt="Zuri internship logo" />
